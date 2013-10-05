@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+	<header>
+		<script type="text/javascript" src="../log4javascript-1.4.6/js/log4javascript.js"></script>
+		<script type="text/javascript" src="../Render/RenderModule.js"></script>
+		<script type="text/javascript" src="../Test/SampleData.js"></script>
+		<script type="text/javascript">
+			var log = log4javascript.getDefaultLogger();
+
+			function start()
+			{
+				var windowSize = getWindowSize();
+				var bubbleData = getBubbleList();
+
+				RenderModule.init(windowSize, bubbleData);
+			} 
+		</script>
+	</header>
+	<body onload="start()">
+		<canvas id="mainWindow" width="1000" height="1000"/>
+	</body>
+</html>
